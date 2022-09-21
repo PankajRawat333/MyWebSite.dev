@@ -1,2 +1,2 @@
-# mywebsite
-This is my personal website
+# PankajRawat.in
+This repository has source code of my website.
