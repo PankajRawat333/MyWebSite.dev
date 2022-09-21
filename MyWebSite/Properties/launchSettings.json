@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MyWebSite.dev": {
+      "commandName": "Project",
+      "commandLineArgs": "preview"
+    }
+  }
+}
