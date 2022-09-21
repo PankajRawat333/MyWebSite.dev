@@ -1,0 +1,3 @@
+[submodule "MyWebSite/theme"]
+	path = MyWebSite/theme
+	url = https://github.com/PankajRawat333/CleanBlogTheme.git
