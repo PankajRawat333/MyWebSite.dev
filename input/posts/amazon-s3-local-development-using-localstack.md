@@ -1,7 +1,6 @@
 Title: Amazon S3 local development using .NET
-Lead: Amazon S3 local development using .NET
 Published: 25/09/2022
-Image: /posts/images/localstack.jpg
+Image: /posts/images/localstack.png
 Tags:
   - aws
   - amazon

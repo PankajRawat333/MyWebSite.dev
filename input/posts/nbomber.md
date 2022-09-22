@@ -1,4 +1,4 @@
-Title: NBomber load Testing 
+Title: NBomber Load Testing 
 Lead: API Load Testing using C# NBomber
 Published: 26/05/2022
 Image: /posts/images/nbomber.jpg
