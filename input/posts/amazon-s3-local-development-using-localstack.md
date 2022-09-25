@@ -3,14 +3,13 @@ Published: 25/09/2022
 Image: /posts/images/localstack.png
 Tags:
   - aws
-  - amazon
   - s3
   - dotnet
   - localstack
   - docker
 ---
 
-It's always good practices before moving your code into cloud, do integration test from local dev environment. Let's say if you don't have AWS account access from your development machine Or you don't want to create resources in AWS account just for integration testing purpose. In that situation LocalStack is best choice.
+It's always good practice before moving your code into cloud, do integration test from local dev environment. Let's say if you don't have AWS account access from your development machine Or you don't want to create resources in AWS account just for integration testing purpose. In that situation LocalStack is best choice.
 
 ### What is LocalStack?
 
@@ -24,7 +23,7 @@ LocalStack supports a growing number of AWS services, like AWS S3, Lambda, Dynam
 
 There are many different way to setup LocalStack such as CLI, Docker, cockpit and helm. In this post, I’ll use docker the easiest way to start and manage LocalStack.
 
-**Prerequisites**
+#### Prerequisites
 
 Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment on your machine before moving on.
 
@@ -38,58 +37,64 @@ Make sure that you have a working [docker](https://docs.docker.com/get-docker/) 
 
 `awslocal s3api list-buckets`
 
-![image.png](/input/images/localstack-command.png align="left")
+<img src="/posts/images/localstack-command.png" width="100%">
+
 
 **Create LocalStack S3 bucket using .NET 6**
 
 To interact with Amazon S3 using .NET, you need to create AmazonS3Client object from `AWSSDK.S3` Nuget package.
 
-    var s3Client = new AmazonS3Client();
+```cs
+var s3Client = new AmazonS3Client();
+```
 
 To interact with LocalStack you need specify `ServiceURL` while creating `AmazonS3Client` object.
 
-    var s3Client = new AmazonS3Client(
-    new AmazonS3Config
-                {
-                    ServiceURL = "http://localhost:4566",
-                    ForcePathStyle = true,
-                });
+```cs
+var s3Client = new AmazonS3Client(
+new AmazonS3Config
+            {
+                ServiceURL = "http://localhost:4566",
+                ForcePathStyle = true,
+            });
+```
 
-Here is complete sample code.
+Here is the complete sample code.
 
-    public async Task S3IntegrationTest(string env)
+```cs
+public async Task S3IntegrationTest(string env)
+{
+    IAmazonS3 s3Client;
+    if (env == "local")
     {
-      IAmazonS3 s3Client;
-      if (env == "local")
-      {
-          s3Client = new AmazonS3Client(new AmazonS3Config
-          {
-              ServiceURL = "http://localhost:4566",
-              ForcePathStyle = true,
-          });
-      }
-      else
-      {
-          s3Client = new AmazonS3Client();
-      }
-
-      string s3bucketName = $"test-bucket-{Guid.NewGuid()}";
-      //1. Create S3 bucket
-      await s3Client.PutBucketAsync(s3bucketName);
-      //2. Put Object into S3 bucket
-      string keyName = Guid.NewGuid().ToString();
-      await s3Client.PutObjectAsync(new Amazon.S3.Model.PutObjectRequest
-      {
-          BucketName = s3bucketName,
-          Key = keyName,
-          ContentType = "text/plain",
-          ContentBody = "Hello, Test message from visual studio"
-      });
-      //3. Delete Object from S3bucket
-      await s3Client.DeleteObjectAsync(s3bucketName, keyName);
-      //4. Delete S3 bucket
-      await s3Client.DeleteBucketAsync(s3bucketName);
-     }
+        s3Client = new AmazonS3Client(new AmazonS3Config
+        {
+            ServiceURL = "http://localhost:4566",
+            ForcePathStyle = true,
+        });
+    }
+    else
+    {
+        s3Client = new AmazonS3Client();
+    }
+    string s3bucketName = $"test-bucket-{Guid.NewGuid()}";
+    //1. Create S3 bucket
+    await s3Client.PutBucketAsync(s3bucketName);
+    //2. Put Object into S3 bucket
+    string keyName = Guid.NewGuid().ToString();
+    await s3Client.PutObjectAsync(new Amazon.S3.Model.PutObjectRequest
+    {
+        BucketName = s3bucketName,
+        Key = keyName,
+        ContentType = "text/plain",
+        ContentBody = "Hello, Test message from visual studio"
+    });
+    //3. Delete Object from S3bucket
+    await s3Client.DeleteObjectAsync(s3bucketName, keyName);
+    //4. Delete S3 bucket
+    await s3Client.DeleteBucketAsync(s3bucketName);
+}
+```
 
 ### Conclusion
 

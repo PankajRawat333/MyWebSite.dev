@@ -1,4 +1,4 @@
-Title: Azure Key Vault Secrets with Manage Idenity
+Title: How to use Azure Key Vault Secrets using Manage Identity
 Published: 15/01/2019
 Lead: In this post, I shared how to use Azure Key Vault Secrets in Azure Function using Manage Idenity
 Image: /posts/images/manage-identity.jpg

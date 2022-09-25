@@ -8,6 +8,7 @@ Tags:
   - embeddedsystem
   - dotnet
   - nanoframework
+  - lowpower
 ---
 **.Net Core** is a cross-platform, fast and lightweight but still, you cannot use it in tiny microcontroller where memory is few kilobytes. Most of the examples are available in C/C++ languages. I'm using .Net and Visual studio since my college time, I don't like to write code in C language, therefore I use MicroPython for embedded device.
 

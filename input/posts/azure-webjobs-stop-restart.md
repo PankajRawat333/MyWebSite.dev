@@ -5,7 +5,7 @@ Image: /posts/images/webjobs.jpg
 Tags:
   - Azure
   - webjobs
-  - activity log
+  - activitylog
 ---
 In this post, I shared how to use Azure activity log to find Azure WebJobs stop/restart problem.
 ## Context
@@ -25,9 +25,9 @@ After looking application diagnostic logs, I got my answer but I was curious to 
 
 Open Tab > Diagnose and solve problems > Web App Restarted
 
-<img src="/posts/images/webjobs-diagnose.jpg" class="img-fluid centered-img">
-<img src="/posts/images/webjobs-diagnose-detail.jpg" class="img-fluid centered-img">
+<img src="/posts/images/webjobs-diagnose.jpg">
+<img src="/posts/images/webjobs-diagnose-detail.jpg">
 Using activity log we can find out user name as well
-<img src="/posts/images/webjobs-activitylog.jpg" class="img-fluid centered-img">
+<img src="/posts/images/webjobs-activitylog.jpg">
 
 Happy cloud computing.

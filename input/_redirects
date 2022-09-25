@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://MyWebSite.netlify.com/* https://www.MyWebSite.dev/:splat 301!

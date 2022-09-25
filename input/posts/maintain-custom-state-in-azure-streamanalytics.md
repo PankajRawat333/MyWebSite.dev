@@ -22,7 +22,7 @@ Alert should be generated in the following pattern
 
 **Example** - Device (ABC00099201) start temperature breach at 12:15 PM till 1 PM. alerts should be generated in the following order
 
-<img src="/posts/images/azure-stream-analytics2.jpg" class="img-fluid centered-img">
+<img src="/posts/images/azure-stream-analytics2.jpg">
 
 ### Solution
 
@@ -32,7 +32,7 @@ There might be many solutions to this problem, here I'm describing my current ap
 
 Below is my architecture diagram to solve this problem
 
-<img src="/posts/images/azure-stream-analytics1.jpg" class="img-fluid centered-img">
+<img src="/posts/images/azure-stream-analytics1.jpg">
 
 Azure Stream Analytics **Input**
 
