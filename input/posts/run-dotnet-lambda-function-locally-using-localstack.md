@@ -1,5 +1,5 @@
 Title: Run .NET Lambda Function Locally Using LocalStack
-Published: 03/10/2022
+Published: 04/10/2022
 Image: /posts/images/localstack.png
 Tags:
   - aws
