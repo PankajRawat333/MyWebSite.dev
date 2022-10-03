@@ -9,7 +9,7 @@ Tags:
   - docker
 ---
 
-This is a continuation of my previous blog [Amazon S3 local development using .NET](). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
+This is a continuation of my previous blog [Amazon S3 local development using .NET](https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
 
 #### Prerequisites
 - Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment on your machine before moving on.
