@@ -1,5 +1,5 @@
 Title: Run .NET Lambda Function Locally Using LocalStack
-Published: 05/10/2022
+Published: 03/10/2022
 Image: /posts/images/localstack.png
 Tags:
   - aws
@@ -12,11 +12,11 @@ Tags:
 This is a continuation of my previous blog [Amazon S3 local development using .NET](https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
 
 ### Prerequisites
-- Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment on your machine before moving on.
+- Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment on your machine.
 - Make sure [LocalStack](https://localstack.cloud/) is running on port 4566.
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio Code](https://code.visualstudio.com/download) downloaded and installed
-- AWS Toolkit for Visual Studio (see [setup instructions](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/setup.html))
-- [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio Code](https://code.visualstudio.com/download) downloaded and installed.
+- AWS Toolkit for Visual Studio (see [setup instructions](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/setup.html)).
+- [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 - An active AWS account (Optional).
 - [AWS Command Line Interface (AWS CLI) version 2.x](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html), installed and [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) on macOS, Linux, or Windows (Optional).
 
@@ -176,7 +176,7 @@ namespace SampleLambdaFunction.IntegrationTests
 We have assigned local variables value in `FunctionUnitTest` constructor for simpilycity.
 
 ## Run integration test using LocalStack
-To run integration test using LocalStack, we need to create a Lambda function with appropriate permission in LocalStack. We can create Lambda function from LocalStack CLI but we want to keep it automated using .NET for every test run, hence We called method `SetupLocalStackLambda` in Arrange section to setup and deploy lambda function in Localstack on every test run.
+To run integration test using LocalStack, we need to create a Lambda function with appropriate permission in LocalStack. We can create Lambda function from LocalStack CLI but we want to keep it automated using .NET for every test run, hence we called method `SetupLocalStackLambda` in Arrange section to setup and deploy lambda function in Localstack on every test run.
 
 - Set `_isRunningOnLocal` variable value as `true`.
 - Run Integration test from visual studio.
@@ -184,13 +184,13 @@ To run integration test using LocalStack, we need to create a Lambda function wi
 ## Run integration test using AWS (Optional)
 - [Deploy](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/lambda-creating-project-in-visual-studio.html) LambdaFunction into your AWS account. Make sure you have given function name `SampleLambdaFunction`.
 - Make sure you have given appropriate permission to lambda function.
-- Make sure deployed lambda function running and tested.
+- Make sure deployed lambda function is running and tested.
 - Set `_isRunningOnLocal` variable value as `false`.
 - Run Integration test from visual studio.
 
 ## Troubleshooting
-1. To verify lambda function response, we need to make sure `result.StatusCode` is `200` and `result.FunctionError` is not `Unhandled`. In most of the cases, lambda function response code is 200 even if it is throwing error.
-2. If lambda function response `result.FunctionError` is `Unhandled`, it means lambda function throwing error which you can check through docker desktop or you can use `result.LogResult`.
+1. To verify lambda function response, we need to make sure `result.StatusCode` is `200` and `result.FunctionError` is not `Unhandled`. In most of the cases, lambda function's response code is 200 even if it is throwing error.
+2. If lambda function's `result.FunctionError` is `Unhandled`, it means lambda function is throwing error which you can check through docker desktop or you can use `result.LogResult`.
     
     <img src="/posts/images/localstack-docker-error.jpg" width="100%">
 
@@ -207,6 +207,6 @@ To run integration test using LocalStack, we need to create a Lambda function wi
     <img src="/posts/images/localstack-log-result.jpg" width="100%">
 
 ### Conclusion
-To run Lambda function in a LocalStack required some additional effort as compare to S3 and SQS which we have seen in our previous blog post. You can check [LocalStack Lambda](https://docs.localstack.cloud/aws/lambda/) for more detail and don't forget to share your thoughts in comments section.
+To run Lambda function in a LocalStack requires some additional effort as compare to S3 and SQS which we have seen in our previous blog post. You can check [LocalStack Lambda](https://docs.localstack.cloud/aws/lambda/) for more detail and don't forget to share your thoughts in comment section.
 
 Happy cloud computing.
