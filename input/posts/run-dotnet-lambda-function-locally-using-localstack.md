@@ -1,5 +1,5 @@
 Title: Run .NET Lambda Function Locally Using LocalStack
-Published: 04/10/2022
+Published: 05/10/2022
 Image: /posts/images/localstack.png
 Tags:
   - aws
@@ -8,6 +8,9 @@ Tags:
   - localstack
   - docker
 ---
+AWS Toolkit for Visual Studio makes it easier for developers to develop and debug Lambda functions locally but for actual Lambda integration test, we need to deploy Lambda function in AWS account. 
+
+In this post, we will use [LocalStack](https://localstack.cloud/) to deploy our Lambda function locally and run integration test locally.
 
 This is a continuation of my previous blog [Amazon S3 local development using .NET](https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
 
@@ -21,7 +24,7 @@ This is a continuation of my previous blog [Amazon S3 local development using .N
 - [AWS Command Line Interface (AWS CLI) version 2.x](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html), installed and [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) on macOS, Linux, or Windows (Optional).
 
 
-## Create Lambda Function
+## Create a Lambda Function
 Before running lambda function in LocalStack, we need to create lambda function in our development machine.
 - Open Visual Studio and create new project
 - Select `AWS Lambda Project (.NET Core - C#)`.
