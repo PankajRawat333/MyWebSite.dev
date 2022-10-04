@@ -1,4 +1,4 @@
-Title: Amazon SQS local development using .NET
+Title: Amazon SQS local development using LocalStack
 Published: 27/09/2022
 Image: /posts/images/localstack.png
 Tags:
@@ -8,8 +8,9 @@ Tags:
   - localstack
   - docker
 ---
+Amazon SQS is a reliable, highly-scalable hosted queue for storing messages as they travel between applications or microservices. Amazon SQS moves data between distributed application components and helps you decouple these components. That means to test your application you will need to connect to the Amazon SQS service each time. For development and testing purposes, you’ll likely want to test locally.
 
-This is a continuation of my previous blog [Amazon S3 local development using .NET](https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
+This is a continuation of my previous blog [Amazon S3 local development using LocalStack](https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
 
 #### Prerequisites
 - Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment on your machine before moving on.

@@ -12,7 +12,7 @@ AWS Toolkit for Visual Studio makes it easier for developers to develop and debu
 
 In this post, we will use [LocalStack](https://localstack.cloud/) to deploy our Lambda function locally and run integration test locally.
 
-This is a continuation of my previous blog [Amazon S3 local development using .NET](https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
+This is a continuation of my previous blog [Amazon S3 local development using LocalStack](https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack). If you are new to LocalStack, I highly recommend you to check previous post where I have covered basic of LocalStack.
 
 ### Prerequisites
 - Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment on your machine.
@@ -40,7 +40,7 @@ To test a Lambda function in AWS or LocalStack, we need to publish the output of
 		<ZipDirectory SourceDirectory="$(OutputPath)" DestinationFile="$(MSBuildProjectDirectory)\$(MSBuildProjectName).zip" Overwrite="true"></ZipDirectory>
 	</Target>
 ```
-After adding above lines `SampleLambdaFunction.csproj` file look like below
+And here is what the `SampleLambdaFunction.csproj` file look like:
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
