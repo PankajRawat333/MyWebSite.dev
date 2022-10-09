@@ -54,6 +54,6 @@ And That’s it 😊. Now, you can see my function app working same as earlier.
 No code changes required in function app to get secrets from Key Vault with manage identity.
 
 ### References
-[What are managed identities for Azure resources]('https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview')
+[What are managed identities for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
 
 Happy cloud computing.
