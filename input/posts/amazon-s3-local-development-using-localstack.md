@@ -25,7 +25,11 @@ There are many different way to setup LocalStack such as CLI, Docker, cockpit an
 
 #### Prerequisites
 
-Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment on your machine before moving on.
+Make sure that you have a working [docker](https://docs.docker.com/get-docker/) environment and Python3 on your machine before moving on.
+
+**Starting LocalStack with CLI**
+
+`pip install awscli-local`
 
 **Starting LocalStack with Docker**
 
