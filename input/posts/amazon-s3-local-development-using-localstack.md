@@ -1,4 +1,5 @@
 Title: Amazon S3 local development using LocalStack
+Description: Run Amazon S3 in local development environment using LocalStack.
 Published: 27/09/2022
 Image: /posts/images/localstack.png
 Tags:

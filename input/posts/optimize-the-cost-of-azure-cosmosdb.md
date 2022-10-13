@@ -1,5 +1,6 @@
 Title: Optimize the cost of Azure Cosmos DB
 Lead: How to reduce Azure CosmosDB cost
+Description: In this post, I'll share some of the best practices to reduce Azure CosmosDB cost.
 Published: 26/01/2019
 Image: /posts/images/optimize-cosmosdb-cost.jpg
 Tags:
@@ -29,7 +30,7 @@ The read and write costs are applicable when using the default session consisten
 Azure Cosmos DB bill may impact based on number of collections. If you've setup RU per collection wise, you need to pay money for each collection whether you're using that collection or not. Azure Cosmos DB Collection minimum limit is 400 RU. Before adding new collection, analysis your collection requirement and read/write frequency.
 
 ### RU sharing
-Azure Cosmos DB offer reserve throughput per collection, where you need to understand your per collection workload and estimate RU usage. (Recently release) Now you can provision throughput collectively, for a set of collections as well, which allows those collections to share the provisioned throughput. This dramatically simplifies the capacity planning, since you can now configure provisioned throughput at different granularities based on your data model or application needs. Now you've the ability to control cost at different granularities in your application’s data model (e.g., database, collection, table, etc.). [Click here](https://azure.microsoft.com/en-us/blog/sharing-provisioned-throughput-across-multiple-containers-in-azure-cosmosdb/) for more detail.
+Azure Cosmos DB offer reserve throughput per collection, where you need to understand your per collection workload and estimate RU usage. (Recently release) Now you can provision throughput collectively, for a set of collections as well, which allows those collections to share the provisioned throughput. This dramatically simplifies the capacity planning, since you can now configure provisioned throughput at different granularities based on your data model or application needs. Now you've the ability to control cost at different granularities in your applicationï¿½s data model (e.g., database, collection, table, etc.). [Click here](https://azure.microsoft.com/en-us/blog/sharing-provisioned-throughput-across-multiple-containers-in-azure-cosmosdb/) for more detail.
 
 ### Scale Up/Down Reserve RU
 Request Unit is collection setting which you can scale up and down as you needed. If your application do't have same workload by 24*7 a day or weekends, you can schedule scale up/down RU by programmatically or [Powershell](https://www.linkedin.com/pulse/update-cosmos-db-ru-using-powershell-azure-function-pankaj-rawat/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BFhrdt7HAR7iN7%2BJ7qjETgA%3D%3D) command. I see many applications having workload in standard business hours, scale down RU in night and weekends will help you to save money.
@@ -63,7 +64,7 @@ Azure Cosmos DB is billed with the unit of GBs. The cost for storage in Azure Co
 <img src="/posts/images/optimize-cosmosdb-cost4.jpg" class="img-fluid centered-img">
 
 ### Reserved Capacity
-Azure Cosmos DB reserved capacity can significantly reduce your Cosmos DB costs—up to 65% on regular prices with a one-year or three-year upfront commitment. Reserved capacity provides a billing discount and doesn't affect the runtime state of your Azure Cosmos DB resources. [Check](https://docs.microsoft.com/en-us/azure/cosmos-db/cosmos-db-reserved-capacity) complete detail of reserved capacity in Azure Cosmos DB.
+Azure Cosmos DB reserved capacity can significantly reduce your Cosmos DB costsï¿½up to 65% on regular prices with a one-year or three-year upfront commitment. Reserved capacity provides a billing discount and doesn't affect the runtime state of your Azure Cosmos DB resources. [Check](https://docs.microsoft.com/en-us/azure/cosmos-db/cosmos-db-reserved-capacity) complete detail of reserved capacity in Azure Cosmos DB.
 
 ### Conclusion
 Azure Cosmos DB is premium product with premium price, I recommend you do your due diligence to evaluate Cosmos DB and other available database.

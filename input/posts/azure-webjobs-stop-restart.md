@@ -1,4 +1,5 @@
 Title: What is the reason of your Azure WebJobs stop/restart?
+Description: Use Azure activity log to find Start/Stop reason in Azure WebJobs.
 Lead: Start/Stop Continuous Azure WebJobs activity log
 Published: 30/07/2018
 Image: /posts/images/webjobs.jpg

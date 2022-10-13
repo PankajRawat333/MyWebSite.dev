@@ -1,4 +1,5 @@
 Title: Run .NET Lambda Function Locally Using LocalStack
+Description: Develop and Deploy .NET Lambda function Locally Using LocalStack
 Published: 05/10/2022
 Image: /posts/images/localstack.png
 Tags:

@@ -1,4 +1,5 @@
 Title: IoT Smart Bin
+Description: Smart bin automatically sends an alert to the maintenance team when the bin is full or about to be full.
 Lead: Smart Bin IoT Solution using ESP32 and Azure
 Published: 09/08/2019
 Image: /posts/images/iot-smart-bin.jpg

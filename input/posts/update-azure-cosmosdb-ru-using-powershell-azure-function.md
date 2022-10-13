@@ -1,5 +1,5 @@
-Title: Update Azure Cosmos-DB RU using Powershell Azure Function
-
+Title: Update Azure CosmosDB RU using Powershell Azure Function
+Description: Update Azure CosmosDB RU dynamically using Powershell Azure Function
 Published: 24/08/2019
 Image: /posts/images/update-cosmosdb-ru.jpg
 Tags:
@@ -36,7 +36,5 @@ Scale Up Function Trigger weekdays at 10 AM IST using below CRON expression.
 
 Scale Down Function Trigger weekday at 7 PM IST using below CRON expression.
 <img src="/posts/images/update-cosmosdb-ru-4.jpg">
-
-
 
 Happy cloud computing.

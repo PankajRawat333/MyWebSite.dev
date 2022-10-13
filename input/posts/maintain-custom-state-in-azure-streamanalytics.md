@@ -1,5 +1,6 @@
 Title: Maintain state in Azure Stream Analytics
 Lead: Maintain Custom State in Azure Stream Analytics using Blob
+Description: Maintain Custom State in Azure Stream Analytics using Blob
 Published: 11/03/2019
 Image: /posts/images/azure-stream-analytics.jpg
 Tags:

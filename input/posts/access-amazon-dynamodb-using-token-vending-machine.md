@@ -1,5 +1,5 @@
 Title: Access Amazon DynamoDB using Token Vending Machine
-
+Description: We will use Amazon DynamoDB using Token Vending Machine to achieve tenant isolation.
 Published: 20/03/2022
 Image: /posts/images/tenant-isolation.jpg
 Tags:
