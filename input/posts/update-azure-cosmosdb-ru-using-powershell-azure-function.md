@@ -2,6 +2,7 @@ Title: Update Azure CosmosDB RU using Powershell Azure Function
 Description: Update Azure CosmosDB RU dynamically using Powershell Azure Function
 Published: 24/08/2019
 Image: /posts/images/update-cosmosdb-ru.jpg
+PrimaryTag: azure
 Tags:
   - azure
   - powershell

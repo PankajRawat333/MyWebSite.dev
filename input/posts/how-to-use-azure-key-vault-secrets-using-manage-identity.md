@@ -3,6 +3,7 @@ Description: Mange identities helps to solve Key Vault access problem by giving 
 Published: 15/01/2019
 Lead: In this post, I shared how to use Azure Key Vault Secrets in Azure Function using Manage Idenity
 Image: /posts/images/manage-identity.jpg
+PrimaryTag: azure
 Tags:
   - azure
   - key-vault

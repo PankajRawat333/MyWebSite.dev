@@ -2,6 +2,7 @@ Title: Running .Net on ESP32 Microcontroller
 Description: Run .NET on microcontroller (ESP32) using nanoFramework.
 Published: 06/03/2020
 Image: /posts/images/nanoframework.jpg
+PrimaryTag: iot
 Tags:
   - iot
   - esp32

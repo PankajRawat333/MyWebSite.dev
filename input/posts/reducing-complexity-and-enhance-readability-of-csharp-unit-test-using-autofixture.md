@@ -2,6 +2,7 @@ Title: Reducing complexity and enhance readability of C# unit tests using AutoFi
 Description: we are explaining about how to write efficient unit tests with less no. of lines of code.
 Published: 20/08/2022
 Image: /posts/images/autofixture-unittest.jpg
+PrimaryTag: dotnet
 Tags:
   - dotnet
   - csharp

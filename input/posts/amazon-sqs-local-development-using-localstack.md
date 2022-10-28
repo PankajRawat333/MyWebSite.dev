@@ -2,6 +2,7 @@ Title: Amazon SQS local development using LocalStack
 Description: Run Amazon SQS in local development environment using LocalStack.
 Published: 27/09/2022
 Image: /posts/images/localstack.png
+PrimaryTag: localstack
 Tags:
   - aws
   - sqs

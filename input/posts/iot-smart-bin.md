@@ -3,6 +3,7 @@ Description: Smart bin automatically sends an alert to the maintenance team when
 Lead: Smart Bin IoT Solution using ESP32 and Azure
 Published: 09/08/2019
 Image: /posts/images/iot-smart-bin.jpg
+PrimaryTag: iot
 Tags:
   - azure
   - iot

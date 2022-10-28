@@ -1,24 +1,11 @@
 @{
+    var primaryTag = Document.GetString("PrimaryTag","aws");
     IDocument[] posts = Outputs.FromPipeline("Content")
-            //.FilterSources(Document.Id)
             .OrderByDescending(item => item.GetDateTime(WebKeys.Published))
             .Where(item => item.GetBool("IsPost") && item.Id != Document.Id)
-            .Take(3)
             .ToArray();
+    var relatedPost = posts.Where(x => x.Get<string[]>("Tags").Contains(primaryTag)).Take(5).ToList();
 }
-
-@if (@posts.Count()>0)
-{
-    <h3 class="bg-dark text-light p-2">Recent posts</h3>
-    @foreach (IDocument post in posts)
-    {
-        <div class="post-preview">
-            <h4 class="post-title">@Html.DocumentLink(post)</h4>
-            <p class="post-meta">Published on @post.GetDateTime(WebKeys.Published).ToLongDateString()</p>
-        </div>
-    }
-}
-
 <script src="https://giscus.app/client.js"
         data-repo="pankajrawat333/MyWebSite.dev"
         data-repo-id="R_kgDOIB9MBg"
@@ -34,3 +21,15 @@
         crossorigin="anonymous"
         async>
 </script>
+
+@if (relatedPost.Count()>0)
+{
+    <h3 class="bg-dark text-light p-2">Related posts</h3>
+    @foreach (IDocument post in relatedPost)
+    {
+        <div class="post-preview">
+            <h4 class="post-title">@Html.DocumentLink(post)</h4>
+            <p class="post-meta">Published on @post.GetDateTime(WebKeys.Published).ToLongDateString()</p>
+        </div>
+    }
+}

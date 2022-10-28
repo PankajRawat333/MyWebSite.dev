@@ -3,6 +3,7 @@ Lead: How to reduce Azure CosmosDB cost
 Description: In this post, I'll share some of the best practices to reduce Azure CosmosDB cost.
 Published: 26/01/2019
 Image: /posts/images/optimize-cosmosdb-cost.jpg
+PrimaryTag: azure
 Tags:
   - azure
   - cosmosdb

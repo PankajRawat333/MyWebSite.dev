@@ -3,8 +3,9 @@ Description: Use Azure activity log to find Start/Stop reason in Azure WebJobs.
 Lead: Start/Stop Continuous Azure WebJobs activity log
 Published: 30/07/2018
 Image: /posts/images/webjobs.jpg
+PrimaryTag: azure
 Tags:
-  - Azure
+  - azure
   - webjobs
   - activitylog
 ---

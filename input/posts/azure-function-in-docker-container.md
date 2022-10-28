@@ -3,6 +3,7 @@ Lead: Run Azure Function in a Docker container and run anywhere!
 Description: We can run Azure Function in a Docker container then we can run it any cloud or On Premises environment.
 Published: 22/07/2019
 Image: /posts/images/azure-function-docker.jpg
+PrimaryTag: azure
 Tags:
   - azure
   - function

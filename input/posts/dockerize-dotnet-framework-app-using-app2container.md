@@ -3,12 +3,14 @@ Lead: Dockerize .NET Framework legacy application without source code
 Description: AWS App2Container is a command line tool, With the help of App2Container tool, you can modernize (dockerize) your .NET and Java application and deploy it to AWS ECS/EKS/App Runner.
 Published: 21/02/2022
 Image: /posts/images/app2container.jpg
+PrimaryTag: docker
 Tags:
   - dotnet
   - aws
   - app2container
   - migration
   - automation
+  - docker
 ---
 
 In this post, I'll show you the power of AWS App2Container command line tool. With the help of App2Container tool, you can modernize (dockerize) your .NET and Java application and deploy it to AWS ECS/EKS/App Runner.
