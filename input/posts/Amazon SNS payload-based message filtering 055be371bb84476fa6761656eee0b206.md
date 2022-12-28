@@ -1,7 +1,7 @@
 Title: Amazon SNS payload-based message filtering
 Description: The new payload-based message filtering option in SNS empowers subscribers to express their SNS subscription filter policies in terms of the contents of the message.
 Published: 28/12/2022
-Image: /posts/images/tenant-isolation.jpg
+Image: /posts/images/amazon-sns-filtering.png
 Tags:
   - aws
   - sns
@@ -53,7 +53,7 @@ Repeat step 4 to subscribe the **Orders-EQ** queue to the Orders SNS topic.
 
 <img src="/posts/images/amazon-sns-payload-based-filtering-sqs2.png">
 
-### Step 5: apply payload-based message filtering
+### Step 6: apply payload-based message filtering
 
 	1. Open **Orders** topic.
 	2. Select **Orders-EU** subscription and then choose **Edit**.
@@ -70,7 +70,7 @@ Repeat step 4 to subscribe the **Orders-EQ** queue to the Orders SNS topic.
 
 We have configured SNS Topic **Orders**, and two SQS queue subscriptions **Orders** queue and **Orders-EU** queue. Now we will send messages to the **Orders** SNS topic which will redirect message to appropriate queue based on filter criteria. 
 
-### Step 6: Publish test messages to Amazon SNS
+### Step 7: Publish test messages to Amazon SNS
 
 	1. Sample message for US location
 
@@ -94,13 +94,13 @@ We have configured SNS Topic **Orders**, and two SQS queue subscriptions **Order
 }
 ```
 
-### Step 7: Verify message delivery
+### Step 8: Verify message delivery
 
 We have not applied any filter in Orders queue, hence we should received both the messages in Orders queue and only 1 message in Orders-EQ.
 
 <img src="/posts/images/amazon-sns-payload-based-filtering-response.png">
 
-### Step 8: Cleanup
+### Step 9: Cleanup
 
 1. Delete Orders SNS topic.
 2. Delete both queue (Orders and Order-EQ)
