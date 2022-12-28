@@ -1,5 +1,5 @@
 Title: Amazon SNS payload-based message filtering
-Description: The new payload-based message filtering option in SNS empowers subscribers to express their SNS subscription filter policies in terms of the contents of the message.
+Description: New payload-based message filtering option of SNS help you to offload additional filtering logic to SNS and reduce your application integration costs.
 Published: 28/12/2022
 Image: /posts/images/amazon-sns-filtering.png
 Tags:
@@ -10,7 +10,7 @@ Tags:
 
 By default, an Amazon SNS topic subscriber receives every message that's published to the topic. To receive only a subset of the messages, a subscriber must assign a filter policy to the topic subscription.
 
-A filter policy is a JSON object containing properties that define which messages the subscriber receives. Amazon SNS supports policies that act on the message attributes or on the message body. Earlier filter policy option was only available on message attribute level not on the message body, **Now [Amazon introducing payload-based message filtering for Amazon SNS](https://aws.amazon.com/blogs/compute/introducing-payload-based-message-filtering-for-amazon-sns/)** 
+A filter policy is a JSON object containing properties that define which messages the subscriber receives. Amazon SNS supports policies that act on the message attributes or on the message body. Earlier filter policy option was only available on message attribute level not on the message body, Now [Amazon introducing payload-based message filtering for Amazon SNS](https://aws.amazon.com/blogs/compute/introducing-payload-based-message-filtering-for-amazon-sns/)
 
 We will use below example to implement payload-based message filtering in Amazon SNS
 
@@ -55,10 +55,10 @@ Repeat step 4 to subscribe the **Orders-EQ** queue to the Orders SNS topic.
 
 ### Step 6: apply payload-based message filtering
 
-	1. Open **Orders** topic.
-	2. Select **Orders-EU** subscription and then choose **Edit**.
-	3. Expand the **Subscription filter policy** section and enable **Subscription filter policy.**
-	4. Select **Message body** and paste below JSON in JSON editor.
+1. Open **Orders** topic.
+2. Select **Orders-EU** subscription and then choose **Edit**.
+3. Expand the **Subscription filter policy** section and enable **Subscription filter policy.**
+4. Select **Message body** and paste below JSON in JSON editor.
 
 ```json
 {
@@ -66,13 +66,13 @@ Repeat step 4 to subscribe the **Orders-EQ** queue to the Orders SNS topic.
 }
 ```
 
-	5. Select **Save changes**.
+5. Select **Save changes**.
 
 We have configured SNS Topic **Orders**, and two SQS queue subscriptions **Orders** queue and **Orders-EU** queue. Now we will send messages to the **Orders** SNS topic which will redirect message to appropriate queue based on filter criteria. 
 
 ### Step 7: Publish test messages to Amazon SNS
 
-	1. Sample message for US location
+1. Sample message for US location
 
 ```json
 {
@@ -83,7 +83,7 @@ We have configured SNS Topic **Orders**, and two SQS queue subscriptions **Order
 }
 ```
 
-	2. Sample message for EU location
+2. Sample message for EU location
 
 ```json
 {
