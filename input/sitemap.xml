@@ -9,322 +9,352 @@
 
 <url>
   <loc>https://rawatpankaj.com/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/about</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/posts/create-custom-project-template-in-visual-studio</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/posts/amazon-sns-payload-based-message-filtering</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/posts/how-to-deserialize-dynamodb-stream-json-to-object-in-dotnet-6</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/run-dotnet-lambda-function-locally-using-localstack</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/amazon-sqs-local-development-using-localstack</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/amazon-s3-local-development-using-localstack</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/reducing-complexity-and-enhance-readability-of-csharp-unit-test-using-autofixture</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/api-load-testing-using-dotnet-nmomber</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/access-amazon-dynamodb-using-token-vending-machine</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/dockerize-dotnet-framework-app-using-app2container</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/posts/dotnet-on-esp32-microcontroller</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/posts/update-azure-cosmosdb-ru-using-powershell-azure-function</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/posts/iot-smart-bin</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/page/2</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/dotnet/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/azure/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/aws/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/azure/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/docker/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/localstack/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/lambda/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rawatpankaj.com/tags/automation/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/iot/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/esp32/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/microcontroller/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/cosmosdb/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/cost/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <loc>https://rawatpankaj.com/tags/localstack/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/sqs/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/s3/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/csharp/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/unittest/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/autofixture/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/nbomber/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/load-testing/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rawatpankaj.com/tags/api/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/dynamodb/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/automation/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/iot/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/esp32/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/microcontroller/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/cosmosdb/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/cost/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/visualstudio/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/sns/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/c/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/s3/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/csharp/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/unittest/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/autofixture/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/nbomber/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/load-testing/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/api/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/token-vending-machine/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rawatpankaj.com/tags/saas/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://rawatpankaj.com/posts/dotnet-on-esp32-microcontroller</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rawatpankaj.com/tags/iam/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://rawatpankaj.com/posts/update-azure-cosmosdb-ru-using-powershell-azure-function</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rawatpankaj.com/tags/app2container/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://rawatpankaj.com/posts/iot-smart-bin</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/azure-function-in-docker-container</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/maintain-custom-state-in-azure-streamanalytics</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/optimize-the-cost-of-azure-cosmosdb</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/how-to-use-azure-key-vault-secrets-using-manage-identity</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/posts/azure-webjobs-stop-restart</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/saas/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/iam/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rawatpankaj.com/tags/app2container/</loc>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/migration/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/embeddedsystem/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/nanoframework/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/lowpower/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/powershell/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/azure-function/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/sensor/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/function/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/container/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/stream-analytics/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/realtime/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/azure-blob/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/database/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/optimize/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/key-vault/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/secrets/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/identity/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/webjobs/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rawatpankaj.com/tags/activitylog/</loc>
-  <lastmod>2022-10-05T05:21:02+00:00</lastmod>
+  <lastmod>2023-01-31T05:34:27+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
