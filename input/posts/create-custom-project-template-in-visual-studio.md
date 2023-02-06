@@ -1,5 +1,5 @@
 Title: Create custom project template in Visual Studio
-Published: 31/01/2023
+Published: 02/02/2023
 Image: /posts/images/VisualStudioTemplate.jpg
 PrimaryTag: dotnet
 Tags:
@@ -144,28 +144,23 @@ When you create a template, all files and folders in the template folder are inc
 
 Refer below folder structure to create template.json and other files.
 
-        project_folder
-        │   
-        └───src
-            └───Content
-                └───AWSLambdaTemplate
-                │   └───.template.config
-                │   │   └───template.json
-                │   │   └───ide.host.json
-                │   │   └───icon.png
-                │   │
-                |   └───AWSLambdaTemplate.csproj
-                |   └───Function.cs
-                |   └───aws-lambda-tools-defaults.json
-                |   └───appsettings.json
-                |   └───appsettings.Development.json
+        src
+         └───AWSLambdaTemplate
+             └───.template.config
+                │   └───template.json
+                │   └───ide.host.json
+                │   └───icon.png
                 │
-                └───RawatPankaj.Com.Lambda.Template.nuspec
-            
+                └───AWSLambdaTemplate.csproj
+                └───Function.cs
+                └───aws-lambda-tools-defaults.json
+                └───appsettings.json
+                └───appsettings.Development.json
+      
 
 - Create `.template.config` folder.
-- Open `.template.config` folder and create new `template.json` file
-- Open and Update below content in `template.json` file
+- Open `.template.config` folder and create new `template.json` file.
+- Open and Update below content in `template.json` file.
 ```json
 {
 	"$schema": "http://json.schemastore.org/template",
@@ -198,7 +193,22 @@ This config file contains all of the settings for your template.
 
 ## Step 4: Create template package
 - Create nuspec file `RawatPankaj.Com.Lambda.Template.nuspec` with the content below.\
-**Note**:- Change file name and content below as per your folder structure.
+**Note**:- Change file name and content below as per your folder structure. Refer below folder structure
+
+           src
+            └───AWSLambdaTemplate
+            │   └───.template.config
+            │   │   └───template.json
+            │   │   └───ide.host.json
+            │   │   └───icon.png
+            │   │
+            |   └───AWSLambdaTemplate.csproj
+            |   └───Function.cs
+            |   └───aws-lambda-tools-defaults.json
+            |   └───appsettings.json
+            |   └───appsettings.Development.json
+            │
+            └───RawatPankaj.Com.Lambda.Template.nuspec
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -281,7 +291,7 @@ You can use [nuget.org](https://www.nuget.org/) to share your custom Visual Stud
 
 <img src="/posts/images/PublishedNugetPackage.JPG" width="100%">
 
-you can download my custom project template from below command
+you can download my custom project [template](https://www.nuget.org/packages/RawatPankaj.Com.Lambda.Template.nuspec) from below command
 
 `dotnet new install RawatPankaj.Com.Lambda.Template.nuspec`
 
