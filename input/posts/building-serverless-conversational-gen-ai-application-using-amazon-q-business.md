@@ -1,7 +1,7 @@
 Title: Building Serverless Conversational Gen AI Application using Amazon Q Business
 
 Description: We will use Amazon Q Business to build conversational generative AI application.
-Published: 21/06/2024
+Published: 26/06/2024
 Image: /posts/images/amazon-q-business-gen-ai-app/amazon-q-app.jpeg
 Tags:
   - aws
