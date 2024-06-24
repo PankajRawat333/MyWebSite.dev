@@ -72,12 +72,13 @@ than 20,000 documents, you can continue with the default settings.
 - Choose **Next**.
 - On the **Connect data sources** page, for **add data source**, choose **Amazon S3**.
 
-![Untitled](images/amazon-q-business-gen-ai-app/create-app-step3.png)
+![Untitled](images/amazon-q-business-gen-ai-app/create-app-step4.png)
 
 - Enter **Data source name**.
 - For **IAM role**, select **Create a new service role (Recommended)**.
 
-![Untitled](images/amazon-q-business-gen-ai-app/create-app-step4.png)
+
+![Untitled](images/amazon-q-business-gen-ai-app/create-app-step3.png)
 
 - For **Sync scope**, Browse S3 bucket and select appropriate bucket.
     - My data was stored in output folder, hence given include patterns “output/”
@@ -88,7 +89,7 @@ than 20,000 documents, you can continue with the default settings.
 
 - Choose **Add data source**
 - Choose **Next**
-- On **Add groups and users** section, select **Users** tab and **Add groups and users**.
+- On **Add groups and users** section, select **Users** tab and **Add or assign users and groups**.
 - Choose **Add new users** and select **Next**
 
 ![Untitled](images/amazon-q-business-gen-ai-app/add-user.png)
@@ -102,6 +103,8 @@ than 20,000 documents, you can continue with the default settings.
 - Choose Assign.
 
 ![Untitled](images/amazon-q-business-gen-ai-app/assign-user.png)
+
+- Choose **Create application**
 
 - You will receive invitation on your email, Accept invitation and setup your account.
 
