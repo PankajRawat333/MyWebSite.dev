@@ -1,6 +1,6 @@
 Title: Extract text from images using Amazon Bedrock & .NET
 Description: Automatically extract text from images in Amazon S3 using Amazon Bedrock.
-Published: 04/08/2024
+Published: 04/09/2024
 Image: /posts/images/Extract-text-from-images.png
 PrimaryTag: Bedrock
 Tags:
@@ -20,7 +20,7 @@ Amazon Bedrock is a fully managed service that leverages advanced machine learni
 ## Solution Architecture
 The following diagram illustrates the high-level architecture. When images are uploaded into the Amazon S3 bucket, notifications are sent to a Lambda function. The Lambda function utilizes that notification to identify the newly uploaded image and sends it to the Amazon Bedrock, which extracts text from the image and stores it in the S3 bucket.
 
-<img src="/posts/images/Extract-text-from-images-using-Amazon-Bedrock-and-dotnet.png" width="100%">
+<img src="/posts/images/Extract-text-from-images-using-Amazon-Bedrock-and-dotnet.png">
 
 The solution includes the following components:
 
@@ -28,7 +28,7 @@ The solution includes the following components:
 2. Anthropic's Claude on Amazon Bedrock - Amazon Bedrock offers access to foundational models from leading AI companies, including models developed by Amazon. We have used Anthropic's Claude Haiku model to extract text from images.
 3. Lambda Function - We have used a Lambda function to execute code which can invoke Amazon Bedrock to extract data. However, you can use any other AI models that have computer vision capabilities.
 
-You can find complete source code on [github](https://github.com/aws-samples/serverless-patterns/tree/main/bedrock-lambda-cdk-dotnet) with instruction on how to deploy it on AWS account via CDK.
+You can find complete source code on **[github](https://github.com/aws-samples/serverless-patterns/tree/main/bedrock-lambda-cdk-dotnet)** with instruction on how to deploy it on AWS account via CDK.
 
 After deployment, add an image to the input/ folder of Amazon S3 bucket. After few seconds, check the output/ folder of S3 bucket for extracted text.
 
