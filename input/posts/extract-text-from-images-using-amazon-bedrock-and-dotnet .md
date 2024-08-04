@@ -1,6 +1,6 @@
 Title: Extract text from images using Amazon Bedrock & .NET
 Description: Automatically extract text from images in Amazon S3 using Amazon Bedrock.
-Published: 04/09/2024
+Published: 04/08/2024
 Image: /posts/images/Extract-text-from-images.png
 PrimaryTag: Bedrock
 Tags:
