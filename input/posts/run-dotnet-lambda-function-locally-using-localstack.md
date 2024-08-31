@@ -212,6 +212,6 @@ To run integration test using LocalStack, we need to create a Lambda function wi
     <img src="/posts/images/localstack-log-result.jpg" width="100%">
 
 ### Conclusion
-To run Lambda function in a LocalStack requires some additional effort as compare to S3 and SQS which we have seen in our previous blog post. You can check [LocalStack Lambda](https://docs.localstack.cloud/aws/lambda/) for more detail and don't forget to share your thoughts in comment section.
+To run Lambda function in a LocalStack requires some additional effort as compare to S3 and SQS which we have seen in our previous blog post. You can check [LocalStack Lambda](https://docs.localstack.cloud/user-guide/aws/lambda/) for more detail and don't forget to share your thoughts in comment section.
 
 Happy cloud computing.

@@ -66,8 +66,6 @@ I tried this POC only for one device, for multiple devices required some logic c
 
 [What is Azure stream analytics and why?](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction)
 
-[Enable real-time hot path analytics and machine learning models in the cloud and on the intelligent edge with Azure Stream Analytics](https://myignite.techcommunity.microsoft.com/sessions/65358?source=sessions)
-
 [Run stream analytics on-premise or your own cluster using Microsoft Trill](https://www.microsoft.com/en-us/research/project/trill/)
 
 Happy cloud computing.
