@@ -5,6 +5,7 @@ Image: /posts/images/Extract-text-from-images.png
 PrimaryTag: Bedrock
 Tags:
   - aws
+  - genai
   - bedrock
   - dotnet
   - s3

@@ -5,6 +5,7 @@ Published: 24/06/2024
 Image: /posts/images/amazon-q-business-gen-ai-app/amazon-q-app.jpeg
 Tags:
   - aws
+  - genai
   - amazon-q
   - amazon-q-business
   - textract
