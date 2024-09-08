@@ -35,6 +35,6 @@ Microsoft design Azure function as Serverless, so the developer doesn't need to 
 
 ### References
 
-[Azure Functions on Kubernetes with KEDA](https://learn.microsoft.com/en-us/azure/azure-functions/functions-kubernetes-keda])
+[Azure Functions on Kubernetes with KEDA](https://learn.microsoft.com/en-us/azure/azure-functions/functions-kubernetes-keda)
 
 Happy cloud computing.
