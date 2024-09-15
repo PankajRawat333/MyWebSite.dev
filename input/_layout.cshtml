@@ -79,7 +79,11 @@
   @Html.Partial("_head")
 
   @RenderSection("Head", false)
-
+  <style>
+  .example_responsive_1 { width: 320px; height: 100px; }
+  @media(min-width: 500px) { .example_responsive_1 { width: 468px; height: 60px; } }
+  @media(min-width: 800px) { .example_responsive_1 { width: 728px; height: 90px; } }
+  </style>
 </head>
 
 <body>
@@ -92,17 +96,17 @@
 
   <!-- Main Content -->
   <div class="container"> 
-  <div style="height:200px">
+  <div>
     @if (Document.GetBool("IsPost"))
     {
-      <ins class="adsbygoogleheader"
+      <ins class="adsbygoogle example_responsive_1"
          style="display:block"
          data-ad-client="ca-pub-7102201205712078"
          data-ad-slot="7834905440"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
     <script>
-         (adsbygoogleheader = window.adsbygoogleheader || []).push({});
+         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     }
   </div>
