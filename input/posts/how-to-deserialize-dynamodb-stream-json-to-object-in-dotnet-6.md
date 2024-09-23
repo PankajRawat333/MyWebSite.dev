@@ -7,7 +7,7 @@ Tags:
   - dynamodb
   - lambda
   - dotnet
-  - C#
+  - csharp
 ---
 Whenever an application creates, updates, or deletes items in the table, DynamoDB Streams writes a stream record with the primary key attributes of the items that were modified. You can configure the stream so that the stream records capture additional information, such as the "before" and "after" images of modified items.
 

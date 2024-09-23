@@ -4,7 +4,6 @@ Published: 24/08/2019
 Image: /posts/images/update-cosmosdb-ru.jpg
 PrimaryTag: azure
 Tags:
-  - azure
   - powershell
   - cosmosdb
   - cost

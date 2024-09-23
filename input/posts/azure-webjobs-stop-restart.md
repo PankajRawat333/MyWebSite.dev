@@ -7,7 +7,6 @@ PrimaryTag: azure
 Tags:
   - azure
   - webjobs
-  - activitylog
 ---
 In this post, I shared how to use Azure activity log to find Azure WebJobs stop/restart problem.
 ## Context

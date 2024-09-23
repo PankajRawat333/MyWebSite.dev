@@ -9,7 +9,6 @@ Tags:
   - iot
   - esp32
   - microcontroller
-  - sensor
 ---
 Recently, I bought ESP32S IoT microcontroller from Amazon to do some POC and get some insight from microcontroller and sensor. I spend 2-3 days to setup and run basic samples (LED on-off, connect WiFI, Send touch sensor data on Cloud etc.) using micro-python. Then I start work on **Smart Bin** POC (just for fun).
 
