@@ -13,7 +13,6 @@ Tags:
   - lambda
   - s3
 ---
-
 [Amazon Q Business](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html) is a conversational assistant powered by generative artificial intelligence (AI) that enhances workforce productivity by answering questions on your data. Amazon Q Business also helps streamline tasks and accelerate problem solving. You can use Amazon Q Business to create and share task automation applications, or perform routine actions like submitting time-off requests and sending meeting invites.
 
 In this blog post, you will learn how to develop conversational assistant using Amazon Q Business to access your private data without writing any code. You can develop a similar solution for enterprises with various enterprise data sources (Share point documents, application logs in S3 bucket, documents in google drive etc.)

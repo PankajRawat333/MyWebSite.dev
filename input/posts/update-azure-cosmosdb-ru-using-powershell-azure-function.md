@@ -11,7 +11,6 @@ Tags:
   - automation
   - azure-function
 ---
-
 This article is one of the implementations of my previous article [Optimize the cost of Azure Cosmos DB](https://www.linkedin.com/pulse/optimize-cost-azure-cosmos-db-pankaj-rawat), I recommended, scale-up/ scale-down Cosmos DB RU according to your business hours, help you to save money. In my current application, we have 6 Environments (Development, Integration, Performance, QA, Stage and Production), except the production environment, I want to scale-down CosmosDB RU in non-business hours (7 PM to 10 AM and weekends) and scale-up RU on business hours (10 AM to 7 PM). Application won't stop by scale-down RU, but won't able to handle high workload.
 
 I have a single database with 10 collections for each environment. Total 8800 RU is reserved and estimated cost $507 per month for per environment.

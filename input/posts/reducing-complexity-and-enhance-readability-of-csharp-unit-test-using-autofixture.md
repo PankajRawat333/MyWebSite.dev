@@ -9,7 +9,6 @@ Tags:
   - unittest
   - autofixture
 ---
-
 Unit tests allows developers to verify their code to make sure that the code works as expected and to identify and fix bugs at early stage. The goal of unit test is to isolate each part of the program and test them individually. When we write Unit Tests for individual code, we mock all external dependencies. The purpose of mocking is to isolate the code being tested without affecting the behavior or state of external dependencies.
 
 If our service has many external dependencies then it adds repeated line of code for each test case which increases complexity and decreases readability. 

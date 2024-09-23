@@ -11,7 +11,6 @@ Tags:
   - dotnet
   - lambda
 ---
-
 When we are working in multi-tenant SaaS application, we need to ensure tenant isolation is maintained. SaaS application can be built with a variety of different architecture. Regulatory, competitive, strategic, cost efficiency, and market considerations all have some influence on the shape of your SaaS architecture. Primarily there are 3 different patterns to design multi-tenant SaaS applications.
 
 1. Silo model refers to an architecture where each tenant has dedicated resources.

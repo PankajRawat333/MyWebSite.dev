@@ -10,7 +10,6 @@ Tags:
   - docker
   - container
 ---
-
 As you might already aware that .NET Core is a cross-platform applications targeting Windows, Linux and macOS and Docker gives more flexibility to run .Net Core application anywhere any devices. Latest Azure function version 2 runs on .NET Core, which means it is cross-platform. Anyone wants to run Azure function on Linux or small non-windows devices can easily run same Azure functions.
 
 Docker provides more flexibility to run Azure functions anywhere, you can take Azure function base image and build your docker image, once your image is ready you can run your container anywhere. You can run on-premise or Other cloud providers. Microsoft also using Docker container to ship IoT edge module or Off-line cognitive services on IoT edge solutions.

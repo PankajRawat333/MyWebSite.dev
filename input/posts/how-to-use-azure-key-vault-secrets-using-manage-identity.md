@@ -10,7 +10,6 @@ Tags:
   - secrets
   - identity
 ---
-
 One of the common concern of every application, either On-premises or Cloud, how to manage application keys and secrets? Keeping credential, secrets and other keys is an important task. Keeping sensitive information in code is not a good practice. Most people keep application keys and secrets in application config file (JSON or XML) and change those value according to environments. I followed the same practice with Azure Function, WebJob and Web App.
 
 ### Problem with Azure Function App Setting

@@ -10,7 +10,6 @@ Tags:
   - realtime
   - azure-blob
 ---
-
 Azure Stream Analytics is easy to get started. It only takes a few clicks to connect to multiple sources, sinks and to create an end-to-end pipeline, and is based on temporal window. Stream analytics maintain state based on window you are using in your ASA query. If you want to maintain some custom state based on your window result, I don't see any out of box solution.
 
 ### Problem

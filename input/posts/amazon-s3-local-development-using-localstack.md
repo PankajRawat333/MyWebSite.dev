@@ -10,7 +10,6 @@ Tags:
   - localstack
   - docker
 ---
-
 It's always a good practice, before moving your code into cloud, do integration test from local dev environment. Let's say if you don't have AWS account access from your development machine Or you don't want to create resources in AWS account just for integration testing purpose in that situation LocalStack is best choice.
 
 ### What is LocalStack?
