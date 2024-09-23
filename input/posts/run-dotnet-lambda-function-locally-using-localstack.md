@@ -209,7 +209,7 @@ To run integration test using LocalStack, we need to create a Lambda function wi
     `docker run -e "LAMBDA_EXECUTOR=docker" -e "LOCALSTACK_HOSTNAME=127.0.0.1" -e "DOCKER_HOST=unix:///var/run/docker.sock" -e "DEFAULT_REGION=us-east-1" -e "TEST_AWS_ACCOUNT_ID=000000000000" -e "DATA_DIR=/tmp/localstack/data" -v /var/run/docker.sock:/var/run/docker.sock -v ./create-resources.sh:/docker-entrypoint-initaws.d/create-resources.sh --rm -d -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack`
 5. If your integration test runs successfully using LocalStack Or AWS, you can convert `result.LogResult` from base64 to text to see the response from Lambda function.
 
-    <img src="/posts/images/localstack-log-result.jpg" width="100%">
+    ![Base64 Result](images/localstack-log-result.jpg)
 
 ### Conclusion
 To run Lambda function in a LocalStack requires some additional effort as compare to S3 and SQS which we have seen in our previous blog post. You can check [LocalStack Lambda](https://docs.localstack.cloud/user-guide/aws/lambda/) for more detail and don't forget to share your thoughts in comment section.
