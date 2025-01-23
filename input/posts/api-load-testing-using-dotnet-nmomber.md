@@ -7,7 +7,6 @@ Tags:
   - dotnet
   - nbomber
   - load-testing
-  - api
 ---
 NBomber is an open source load testing framework which help .NET developers to load test their applications. NBomber is a lightweight framework for writing load tests which you can use to test literally any system and simulate any production workload. With NBomber you can test any PULL or PUSH system (HTTP, WebSockets, GraphQl, gRPC, SQL Database, MongoDb, Redis etc).
 

@@ -7,7 +7,7 @@ Tags:
   - dynamodb
   - token-vending-machine
   - saas
-  - aws-iam
+  - identity
   - dotnet
   - lambda
 ---

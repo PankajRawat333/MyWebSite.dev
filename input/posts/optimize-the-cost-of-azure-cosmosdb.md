@@ -9,7 +9,6 @@ Tags:
   - cosmosdb
   - database
   - cost
-  - optimize
 ---
 I used Azure Cosmos DB in many projects and heard common concern from application owner and stakeholder is **Cosmos DB is best NOSQL database but it's very costly!**
 
