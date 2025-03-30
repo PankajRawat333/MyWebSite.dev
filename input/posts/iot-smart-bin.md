@@ -1,5 +1,6 @@
-Title: IoT Smart Bin
-Description: Smart bin automatically sends an alert to the maintenance team when the bin is full or about to be full.
+Title: Building an IoT Smart Bin with ESP32 and Azure
+
+Description: Learn how to create a smart bin that automatically alerts the maintenance team when it's full or nearly full using ESP32, ultrasonic sensors, and Azure IoT services.
 Lead: Smart Bin IoT Solution using ESP32 and Azure
 Published: 09/08/2019
 Image: /posts/images/iot-smart-bin.jpg
@@ -10,43 +11,37 @@ Tags:
   - esp32
   - microcontroller
 ---
-Recently, I bought ESP32S IoT microcontroller from Amazon to do some POC and get some insight from microcontroller and sensor. I spend 2-3 days to setup and run basic samples (LED on-off, connect WiFI, Send touch sensor data on Cloud etc.) using micro-python. Then I start work on **Smart Bin** POC (just for fun).
 
-Smart bin automatically sends an alert to the maintenance team when the bin is full or about to be full. Inside the bin cover, I put the following device and sensor.
+I recently purchased an ESP32S IoT microcontroller from Amazon to explore its capabilities and gain hands-on experience with microcontrollers and sensors. After spending a few days setting up basic samples—such as LED control, WiFi connectivity, and sending touch sensor data to the cloud using MicroPython—I decided to tackle a fun proof-of-concept (POC) project: building a **Smart Bin**.
 
-- HC-SR04 Ultrasonic (US) sensor
-- ESP32S Microcontroller
+The Smart Bin automatically alerts the maintenance team when it’s full or nearly full. To achieve this, I installed the following components inside the bin cover:
 
-I have written Microcontroller code in micro-python to read sensor data in every minute and calculate free space (distance) inside the bin. I used WiFi connectivity to send distance data in Azure IoT hub, where I used Azure Stream Analytics to analyze stream and generate alerts if data (distance value) breach threshold limit continuously (bin full or about to full). Once an alert comes into a queue, Azure Logic app would trigger and send an email to the maintenance team.
+- **HC-SR04 Ultrasonic (US) Sensor**: Measures the distance to the bin’s contents.
+- **ESP32S Microcontroller**: Processes sensor data and communicates with the cloud.
 
-<img src="/posts/images/iot-smart-bin-diagram.png">
+Using MicroPython, I programmed the ESP32S to read the sensor data every minute and calculate the free space inside the bin. The microcontroller connects to WiFi and sends this distance data to Azure IoT Hub. In Azure, I used Stream Analytics to monitor the data stream and generate alerts if the bin’s free space falls below a threshold (indicating it’s full or nearly full). These alerts are then sent to a queue, triggering an Azure Logic App that emails the maintenance team.
 
+![Smart Bin Architecture](/posts/images/iot-smart-bin-diagram.png)
 
-### How Ultrasonic Sensor Works
+### How the Ultrasonic Sensor Works
 
-As shown in below image **HC-SR04 Ultrasonic (US) sensor** is a 4 pin module, whose pin names are Vcc, Trigger, Echo and Ground respectively. This sensor is a very popular sensor used in many applications where measuring distance or sensing objects are required. The module has two eyes like projects in the front which forms the Ultrasonic transmitter and Receiver. The sensor works with the simple high school formula that
+The **HC-SR04 Ultrasonic Sensor** is a four-pin module (Vcc, Trigger, Echo, and Ground) widely used for measuring distance or detecting objects. It features two front-facing components: an ultrasonic transmitter and receiver. The sensor operates using the simple formula:
 
-<img src="/posts/images/iot-smart-bin-sensor.png">
+**Distance = Speed × Time**
 
-**Distance = Speed x Time**
+The transmitter emits ultrasonic waves that travel through the air, reflect off any object (like the bin’s contents), and return to the receiver. The sensor measures the time it takes for the echo to return and outputs this duration via the Echo pin. Since the speed of sound is approximately 330 m/s at room temperature, the microcontroller uses this time to calculate the distance.
 
-The Ultrasonic transmitter transmits an ultrasonic wave, this wave travels in air and when it gets objected by any material it gets reflected back toward the sensor this reflected wave is observed by the Ultrasonic receiver module as shown in the picture below
+![Ultrasonic Sensor Operation](/posts/images/iot-smart-bin-sensor2.png)
 
-<img src="/posts/images/iot-smart-bin-sensor2.png">
+For this project, I mounted the sensor inside the bin cover to measure the distance to the bin’s contents, as shown below:
 
-Now, to calculate the distance using the above formulae, we should know the Speed and time. Since we are using the Ultrasonic wave we know the universal speed of US wave at room conditions which is 330m/s. The circuitry inbuilt on the module will calculate the time taken for the US wave to come back and turns on the echo pin high for that same particular amount of time, this way we can also know the time taken. Now simply calculate the distance using a microcontroller or microprocessor.
+![Smart Bin Setup](/posts/images/iot-smart-bin-setup.jpg)
 
-<img src="/posts/images/iot-smart-bin-setup.jpg">
-
-My circuit diagram, Check below reference link for clear circuit diagram and purpose of relay. for now, I used mobile-power-bank to supply power.
-
-
+I powered the setup using a mobile power bank for convenience. For a detailed circuit diagram and information on using a relay, refer to the [references](#references) section.
 
 ### References
 
-[Github](https://github.com/PankajRawat333/SmartBin)
+- [GitHub Repository](https://github.com/PankajRawat333/SmartBin)
+- [Circuit Diagram and Relay Details](https://www.bing.com/search?q=Circuit+diagram+and+relay+details+for+ecs32+and+ultrasonic+sensor&cvid=67d2ad7c489241f7aff06a881d23b23b&aqs=edge..69i57.10806j0j4&FORM=ANAB01&PC=U531)
 
-[Circuit diagram and relay details](https://www.bing.com/search?q=Circuit+diagram+and+relay+details+for+ecs32+and+ultrasonic+sensor&cvid=67d2ad7c489241f7aff06a881d23b23b&aqs=edge..69i57.10806j0j4&FORM=ANAB01&PC=U531)
-
-
-Happy coding.
+Happy coding!

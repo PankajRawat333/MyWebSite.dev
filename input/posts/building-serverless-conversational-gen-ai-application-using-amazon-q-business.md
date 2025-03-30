@@ -1,6 +1,6 @@
-Title: Building Serverless Conversational Gen AI Application using Amazon Q Business
+Title: Building a Serverless Conversational AI App with Amazon Q Business
 
-Description: We will use Amazon Q Business to build conversational generative AI application without writing any code.
+Description: Learn how to build a conversational generative AI application using Amazon Q Business without writing any code, integrating seamlessly with your private data.
 Published: 24/06/2024
 Image: /posts/images/amazon-q-business-gen-ai-app/amazon-q-app.jpeg
 Tags:
@@ -13,130 +13,116 @@ Tags:
   - lambda
   - s3
 ---
-[Amazon Q Business](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html) is a conversational assistant powered by generative artificial intelligence (AI) that enhances workforce productivity by answering questions on your data. Amazon Q Business also helps streamline tasks and accelerate problem solving. You can use Amazon Q Business to create and share task automation applications, or perform routine actions like submitting time-off requests and sending meeting invites.
 
-In this blog post, you will learn how to develop conversational assistant using Amazon Q Business to access your private data without writing any code. You can develop a similar solution for enterprises with various enterprise data sources (Share point documents, application logs in S3 bucket, documents in google drive etc.)
+[Amazon Q Business](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html) is a conversational assistant powered by generative artificial intelligence (AI) that enhances workforce productivity by answering questions based on your data. It streamlines tasks, accelerates problem-solving, and allows you to create and share task automation applications or perform routine actions like submitting time-off requests and sending meeting invites.
 
-[Connectors](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/connectors-list.html) makes it easy to synchronize data from multiple content repositories with your Amazon Q index. Connectors can be scheduled to automatically sync your index with your data source, so you're always securely searching through the most up-to-date content.
+In this blog post, you’ll discover how to develop a conversational assistant using Amazon Q Business to access your private data—no coding required. This method can be adapted for enterprises with diverse data sources, such as SharePoint documents, application logs in S3 buckets, or Google Drive files.
 
-For experimental purpose, I used my personal documents. I have uploaded my personal documents such as Aadhaar, PAN, Driving license, Voter ID, Bank Account Passbook, and many more scanned documents in Amazon S3 bucket. 
-Handling documents in image format can be quite challenging, as they are not readily without the appropriate tools. This is where Optical Character Recognition (OCR) software comes into play. To address this issue, I utilized Amazon Textract for its robust data extraction capabilities. For those interested in exploring further, I have shared the complete source code along with an explanation on [ServerlessLand](https://serverlessland.com/patterns/textract-lambda-cdk-dotnet). 
+[Connectors](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/connectors-list.html) simplify synchronizing data from multiple repositories with your Amazon Q index. They can be scheduled to automatically sync, ensuring your searches always reflect the latest content securely.
 
-However, the situation became more complex when I began uploading a diverse set of documents (labeled, unlabeled and multilingual). The initial result were unsatisfactory. Although Amazon Textract training improve the outcome, the time investment was more sigiificant than I had anticipated.
+For this experiment, I used personal documents (e.g., Aadhaar, PAN, Driving License, Voter ID, Bank Passbook) uploaded as scanned images to an Amazon S3 bucket. Extracting text from images can be challenging without the right tools. Initially, I used [Amazon Textract](https://aws.amazon.com/textract/), an Optical Character Recognition (OCR) service, for its robust data extraction capabilities. You can explore the source code for this approach on [ServerlessLand](https://serverlessland.com/patterns/textract-lambda-cdk-dotnet).
 
-Here are the few reasons why I didn't use Textract:
+However, challenges arose with diverse document types (labeled, unlabeled, and multilingual). While training Amazon Textract improved results, it required significant time and sample documents, which wasn’t practical for an experimental app. Here’s why I moved away from Textract:
 
--  My documents were too varied to standardize.
-- Textract’s custom model training demanded sample documents that were tough to procure.
-- Training time for each document was extensive, and for an experimental app, it was time I couldn’t justify.
+- My documents were too varied to standardize.
+- Custom model training required hard-to-obtain sample documents.
+- Training time was too long for an experimental setup.
 
-To address the challenges mentioned, I utilized [Amazon Bedrock](https://aws.amazon.com/bedrock/), a fully managed service that offers access to foundational models (FMs) from premier AI organizations via a single interface. **Anthrophic’s Claude 3**, one of the models available on Amazon Bedrock, offers vision capabilities. I used Claude 3 Sonnet model to extract the text from the scanned documents. For those interested in exploring further, I have shared the complete source code along with an explanation on [ServerlessLand](https://serverlessland.com/patterns/bedrock-lambda-cdk-dotnet).
+Instead, I turned to [Amazon Bedrock](https://aws.amazon.com/bedrock/), a managed service offering foundational AI models. I used **Anthropic’s Claude 3 Sonnet** model, which includes vision capabilities, to extract text from scanned documents. The source code for this solution is available on [ServerlessLand](https://serverlessland.com/patterns/bedrock-lambda-cdk-dotnet).
 
-Once I have received my data in text format, I wanted to build conversational assistant top of my personal data.
+With the text extracted, I built a conversational assistant atop my personal data using Amazon Q Business.
 
-## Solution overview
+## Solution Overview
 
-The following diagram shows a high-level architecture of how I used Amazon Q business application to build conversational assistant on personal documents. 
+The diagram below outlines the high-level architecture of this conversational assistant built with Amazon Q Business.
 
-![Screenshot 2024-06-01 134836.png](images/amazon-q-business-gen-ai-app/solution-overview.png)
+![Solution Overview](/posts/images/amazon-q-business-gen-ai-app/solution-overview.png)
 
-The following diagram illustrates the high-level architecture of how users will interact with the Amazon Q Business application using an Amazon Q Business web experience from their web browser. The Amazon Q Web Experience is secured by AWS IAM Identity Center. Users will upload scanned documents to an S3 bucket, and a Lambda function will extract text from the uploaded documents using Amazon Bedrock. The output of the extracted documents will be stored in an S3 bucket, which will serve as the source for the Amazon Q Business application.
+Users interact with the Amazon Q Business application through a web browser via the Amazon Q Web Experience, secured by AWS IAM Identity Center. Scanned documents are uploaded to an S3 bucket, processed by an AWS Lambda function using Amazon Bedrock for text extraction, and stored in another S3 bucket as the data source for Amazon Q Business.
 
-**The solution includes the following components:**
+**Key Components:**
 
-1. Amazon S3 bucket - S3 bucket used as a datasource for Amazon Q Business.
-2. AWS Lambda Function - Lambda function that extract text scanned documents using Amazon Bedrock.
-3. Anthropic’s Claude 3 on Amazon Bedrock - Lambda function utilizes Anthropic's Claude 3 sonnat model to extract text from images.
-4. Amazon Q business application - Build conversational assistant using Amazon Q business and Web experience.
-5. AWS IAM Identity center - Amazon Q Web Experience is secured by AWS IAM Identity center.
+1. **Amazon S3 Bucket**: Stores extracted text as the data source for Amazon Q Business.
+2. **AWS Lambda Function**: Extracts text from scanned documents using Amazon Bedrock.
+3. **Anthropic’s Claude 3 on Amazon Bedrock**: Processes images within the Lambda function.
+4. **Amazon Q Business Application**: Powers the conversational assistant and web experience.
+5. **AWS IAM Identity Center**: Secures the Amazon Q Web Experience.
 
-## **Configure an Amazon Q Business application**
+## Configure an Amazon Q Business Application
 
-- Login to your AWS account and open Amazon Q Business
-- Choose **Create application**
-- For **Application name**, enter a name
-- For **Service Access**, keep default option selected **Amazon Q Business requires permissions to use other services on your behalf**. (you can change option if required)
-- Choose **Create**.
+Follow these steps to set up your application:
 
-![Untitled](images/amazon-q-business-gen-ai-app/create-app-step1.png)
+1. **Create the Application**:
+   - Log in to your AWS account and open Amazon Q Business.
+   - Click **Create application**.
+   - Enter an **Application name**.
+   - Keep the default **Service Access** option: *“Amazon Q Business requires permissions to use other services on your behalf”* (adjust if needed).
+   - Click **Create**.
 
-- On the **Select retriever** page, select **Use native retriever** unless you want to configure a preexisting [Amazon Kendra](https://aws.amazon.com/kendra/) index as a retriever, or you need to configure storage units for more
-than 20,000 documents, you can continue with the default settings.
+   ![Create Application Step 1](/posts/images/amazon-q-business-gen-ai-app/create-app-step1.png)
 
-![Untitled](images/amazon-q-business-gen-ai-app/create-app-step2.png)
+2. **Select Retriever**:
+   - Choose **Use native retriever** (default) unless you need a pre-existing [Amazon Kendra](https://aws.amazon.com/kendra/) index or storage for over 20,000 documents.
+   - Retain default **Index provisioning** settings.
+   - Click **Next**.
 
-- keep default selection for **Index provisioning**
-- Choose **Next**.
-- On the **Connect data sources** page, for **add data source**, choose **Amazon S3**.
+   ![Create Application Step 2](/posts/images/amazon-q-business-gen-ai-app/create-app-step2.png)
 
-![Untitled](images/amazon-q-business-gen-ai-app/create-app-step4.png)
+3. **Connect Data Sources**:
+   - Select **Amazon S3** as the data source.
 
-- Enter **Data source name**.
-- For **IAM role**, select **Create a new service role (Recommended)**.
+   ![Create Application Step 4](/posts/images/amazon-q-business-gen-ai-app/create-app-step4.png)
 
+   - Enter a **Data source name**.
+   - For **IAM role**, select **Create a new service role (Recommended)**.
 
-![Untitled](images/amazon-q-business-gen-ai-app/create-app-step3.png)
+   ![Create Application Step 3](/posts/images/amazon-q-business-gen-ai-app/create-app-step3.png)
 
-- For **Sync scope**, Browse S3 bucket and select appropriate bucket.
-    - My data was stored in output folder, hence given include patterns “output/”
-- For **Sync mode** select **full sync**.
-- For **Sync run schedule**, Select **Run on demand** (you can change sync run schedule according to your data update frequency)
+   - Browse and select your S3 bucket. If your data is in a folder (e.g., `output/`), set it as the include pattern.
+   - Set **Sync mode** to **Full sync** and **Sync run schedule** to **Run on demand** (adjust frequency as needed).
 
-![Screenshot 2024-06-03 140405.png](images/amazon-q-business-gen-ai-app/choose-s3-bucket.png)
+   ![Choose S3 Bucket](/posts/images/amazon-q-business-gen-ai-app/choose-s3-bucket.png)
 
-- Choose **Add data source**
-- Choose **Next**
-- On **Add groups and users** section, select **Users** tab and **Add or assign users and groups**.
-- Choose **Add new users** and select **Next**
+   - Click **Add data source**, then **Next**.
 
-![Untitled](images/amazon-q-business-gen-ai-app/add-user.png)
+4. **Add Groups and Users**:
+   - Go to the **Users** tab and click **Add or assign users and groups**.
+   - Select **Add new users**, enter details, and click **Next**.
 
-- Add user detail and choose **Next**.
+   ![Add User](/posts/images/amazon-q-business-gen-ai-app/add-user.png)
 
-![Untitled](images/amazon-q-business-gen-ai-app/add-user-detail.png)
+   - Assign the user and click **Create application**.
 
-- Again you need to click on **Add groups and users**
-- Choose **Assign existing users**
-- Choose **Assign**
+5. **Accept Invitation**:
+   - Check your email for an invitation, accept it, and set up your account.
 
-![Untitled](images/amazon-q-business-gen-ai-app/assign-user.png)
+   ![Accept Invitation](/posts/images/amazon-q-business-gen-ai-app/accept-invitation.png)
 
-- Choose **Create application**
+6. **Finalize Application**:
+   - For **Web experience service access**, keep the default **Create and use a new service role**.
+   - Click **Create application**.
 
-- You will receive invitation on your email, Accept invitation and setup your account.
+7. **Sync Data Source**:
+   - Select your application, go to the **Data source** section, choose **s3-datasource**, and click **Sync now**.
 
-![Untitled](images/amazon-q-business-gen-ai-app/accept-invitation.png)
+   ![Select Data Source](/posts/images/amazon-q-business-gen-ai-app/select-data-source.png)
 
-- On Web experience service access, keep default selection **Create and use a new service role**.
-- Choose **Create application**.
+   - Wait for the sync to complete.
 
-Once application is created, you need to wait for S3 data to sync. In above steps we have selected manual sync.
+   ![Sync Data Source](/posts/images/amazon-q-business-gen-ai-app/sync-data-source.png)
 
-- To sync data source manually, **Select application**
+8. **Start Conversation**:
+   - Return to the application, select **Web experience**, and log in with your credentials.
+   - Begin asking questions about your documents.
 
-![Untitled](images/amazon-q-business-gen-ai-app/select-app-for-data-sync.png)
+   ![Conversation Chat](/posts/images/amazon-q-business-gen-ai-app/conversation-chat.png)
 
-- On **Data source** section, Select **s3-datasource** and Choose **Sync now**
+   - Amazon Q Business includes **source** information with each response for verification.
 
-![Untitled](images/amazon-q-business-gen-ai-app/select-data-source.png)
+   ![Conversation Chat Source](/posts/images/amazon-q-business-gen-ai-app/conversation-chat-source.png)
 
-- Once sync is complete you are good to start conversation. You can check sync status on **Data Source** tab.
+## Conclusion
 
-![Untitled](images/amazon-q-business-gen-ai-app/sync-data-source.png)
+Amazon Q Business lets you build a private conversational AI assistant without coding. Its connectors integrate effortlessly with your data sources, allowing natural language queries. I chose Amazon Bedrock over Textract for text extraction due to my experimental needs, but Amazon Textract excels at extracting text, handwriting, and layout elements from scanned documents in most cases.
 
-- To start conversation, go back on **application** (my-personal-assistant) and select **web experience**.
-- Use your credential which you have created in above steps.
-- Once you have logged in successfully, you can start asking question related to your document.
-
-![Screenshot 2024-06-03 195543.png](images/amazon-q-business-gen-ai-app/conversation-chat.png)
-
-- Amazon Q Business will add **source** information on each response so you can check the source of the information if required.
-
-![Screenshot 2024-06-03 195609.png](images/amazon-q-business-gen-ai-app/conversation-chat-source.png)
-
-### **Conclusion**
-
-By using Amazon Q Business, you can build private conversational Generative AI assistant without writing any code. It has many connectors which help you to easily integrate with your existing data sources without moving the data. Amazon Q makes it easy to connect the data and start asking questions in natural language.
-I used Amazon Bedrock over Textract for data extraction from scanned documents but It’s doesn’t mean Bedrock is better than Textract for data extraction. In fact, Amazon Textract is a machine learning (ML) service specifically designed to extracts text, handwriting, layout elements, and data from scanned documents. In most cases, Amazon Textract is well-suited for data extraction from scanned documents.
-
-Happy cloud computing.
+Happy cloud computing!
