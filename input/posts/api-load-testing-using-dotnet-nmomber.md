@@ -1,5 +1,4 @@
-Title: Load Testing APIs with .NET NBomber: A Step-by-Step Guide
-
+Title: Load Testing APIs with .NET NBomber
 Description: Discover how to use NBomber, an open-source load testing framework, to test your .NET applications. This guide walks you through setup, execution, and result analysis for API load testing.
 Published: 26/05/2022
 Image: /posts/images/nbomber.jpg
