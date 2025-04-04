@@ -30,7 +30,7 @@ For this example, I opted for the console application approach. Here’s how to 
 1. Create a new C# console application.
 2. Install the **NBomber** NuGet package.
 
-![Adding NBomber NuGet Package](/posts/images/nbomber-1.jpg)
+![Screenshot showing NBomber NuGet package installation in Visual Studio](/posts/images/nbomber-1.jpg)
 
 ### Step 3: Configure the API Load Test
 

@@ -36,7 +36,7 @@ With the text extracted, I built a conversational assistant atop my personal dat
 
 The diagram below outlines the high-level architecture of this conversational assistant built with Amazon Q Business.
 
-![Solution Overview](/posts/images/amazon-q-business-gen-ai-app/solution-overview.png)
+![High-level architecture diagram of Amazon Q Business conversational AI application](/posts/images/amazon-q-business-gen-ai-app/solution-overview.png)
 
 Users interact with the Amazon Q Business application through a web browser via the Amazon Q Web Experience, secured by AWS IAM Identity Center. Scanned documents are uploaded to an S3 bucket, processed by an AWS Lambda function using Amazon Bedrock for text extraction, and stored in another S3 bucket as the data source for Amazon Q Business.
 
@@ -59,29 +59,29 @@ Follow these steps to set up your application:
    - Keep the default **Service Access** option: *“Amazon Q Business requires permissions to use other services on your behalf”* (adjust if needed).
    - Click **Create**.
 
-   ![Create Application Step 1](/posts/images/amazon-q-business-gen-ai-app/create-app-step1.png)
+   ![Screenshot of Amazon Q Business application creation first step](/posts/images/amazon-q-business-gen-ai-app/create-app-step1.png)
 
 2. **Select Retriever**:
    - Choose **Use native retriever** (default) unless you need a pre-existing [Amazon Kendra](https://aws.amazon.com/kendra/) index or storage for over 20,000 documents.
    - Retain default **Index provisioning** settings.
    - Click **Next**.
 
-   ![Create Application Step 2](/posts/images/amazon-q-business-gen-ai-app/create-app-step2.png)
+   ![Screenshot of retriever selection in Amazon Q Business setup](/posts/images/amazon-q-business-gen-ai-app/create-app-step2.png)
 
 3. **Connect Data Sources**:
    - Select **Amazon S3** as the data source.
 
-   ![Create Application Step 4](/posts/images/amazon-q-business-gen-ai-app/create-app-step4.png)
+   ![Screenshot of data source selection showing Amazon S3 option](/posts/images/amazon-q-business-gen-ai-app/create-app-step4.png)
 
    - Enter a **Data source name**.
    - For **IAM role**, select **Create a new service role (Recommended)**.
 
-   ![Create Application Step 3](/posts/images/amazon-q-business-gen-ai-app/create-app-step3.png)
+   ![Screenshot of data source name and IAM role configuration](/posts/images/amazon-q-business-gen-ai-app/create-app-step3.png)
 
    - Browse and select your S3 bucket. If your data is in a folder (e.g., `output/`), set it as the include pattern.
    - Set **Sync mode** to **Full sync** and **Sync run schedule** to **Run on demand** (adjust frequency as needed).
 
-   ![Choose S3 Bucket](/posts/images/amazon-q-business-gen-ai-app/choose-s3-bucket.png)
+   ![Screenshot of S3 bucket selection interface for data source](/posts/images/amazon-q-business-gen-ai-app/choose-s3-bucket.png)
 
    - Click **Add data source**, then **Next**.
 
@@ -89,14 +89,14 @@ Follow these steps to set up your application:
    - Go to the **Users** tab and click **Add or assign users and groups**.
    - Select **Add new users**, enter details, and click **Next**.
 
-   ![Add User](/posts/images/amazon-q-business-gen-ai-app/add-user.png)
+   ![Screenshot of user addition interface for Amazon Q Business](/posts/images/amazon-q-business-gen-ai-app/add-user.png)
 
    - Assign the user and click **Create application**.
 
 5. **Accept Invitation**:
    - Check your email for an invitation, accept it, and set up your account.
 
-   ![Accept Invitation](/posts/images/amazon-q-business-gen-ai-app/accept-invitation.png)
+   ![Screenshot of email invitation acceptance for Amazon Q Business](/posts/images/amazon-q-business-gen-ai-app/accept-invitation.png)
 
 6. **Finalize Application**:
    - For **Web experience service access**, keep the default **Create and use a new service role**.
@@ -105,21 +105,21 @@ Follow these steps to set up your application:
 7. **Sync Data Source**:
    - Select your application, go to the **Data source** section, choose **s3-datasource**, and click **Sync now**.
 
-   ![Select Data Source](/posts/images/amazon-q-business-gen-ai-app/select-data-source.png)
+   ![Screenshot of data source selection interface in Amazon Q Business](/posts/images/amazon-q-business-gen-ai-app/select-data-source.png)
 
    - Wait for the sync to complete.
 
-   ![Sync Data Source](/posts/images/amazon-q-business-gen-ai-app/sync-data-source.png)
+   ![Screenshot of data source synchronization process in Amazon Q Business](/posts/images/amazon-q-business-gen-ai-app/sync-data-source.png)
 
 8. **Start Conversation**:
    - Return to the application, select **Web experience**, and log in with your credentials.
    - Begin asking questions about your documents.
 
-   ![Conversation Chat](/posts/images/amazon-q-business-gen-ai-app/conversation-chat.png)
+   ![Screenshot of conversation interface with Amazon Q Business chatbot](/posts/images/amazon-q-business-gen-ai-app/conversation-chat.png)
 
    - Amazon Q Business includes **source** information with each response for verification.
 
-   ![Conversation Chat Source](/posts/images/amazon-q-business-gen-ai-app/conversation-chat-source.png)
+   ![Screenshot showing source attribution in Amazon Q Business conversation responses](/posts/images/amazon-q-business-gen-ai-app/conversation-chat-source.png)
 
 ## Conclusion
 

@@ -20,7 +20,7 @@ Amazon Bedrock is a fully managed service that leverages advanced machine learni
 ## Solution Architecture
 The following diagram illustrates the high-level architecture. When images are uploaded into the Amazon S3 bucket, notifications are sent to a Lambda function. The Lambda function utilizes that notification to identify the newly uploaded image and sends it to the Amazon Bedrock, which extracts text from the image and stores it in the S3 bucket.
 
-![Solution Architecture](images/Extract-text-from-images-using-Amazon-Bedrock-and-dotnet.png)
+![Architectural diagram showing the workflow of extracting text from images using Amazon S3, Lambda, and Bedrock](/posts/images/Extract-text-from-images-using-Amazon-Bedrock-and-dotnet.png)
 
 
 The solution includes the following components:
