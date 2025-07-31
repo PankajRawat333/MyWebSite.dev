@@ -1,5 +1,5 @@
 Title: Bloom Filters Demystified
-Description: Bloom filter is a space-efficient probabilistic data structure used to test whether an element is a member of a set.
+Description: Learn to implement Bloom filters in C# from scratch and with Redis for distributed systems.
 Published: 31/07/2025
 Image: /posts/images/localstack.png
 PrimaryTag: aws
@@ -85,12 +85,12 @@ class Program
         BloomFilter filter = new BloomFilter(1000, 3);
 
         // Add some usernames
-        filter.Add("john_doe");
-        filter.Add("jane_smith");
+        filter.Add("pankaj");
+        filter.Add("pankajrawat");
 
         // Test if usernames are taken
-        Console.WriteLine(filter.MightContain("john_doe"));    // True
-        Console.WriteLine(filter.MightContain("jane_smith"));  // True
+        Console.WriteLine(filter.MightContain("pankaj"));    // True
+        Console.WriteLine(filter.MightContain("pankajrawat"));  // True
         Console.WriteLine(filter.MightContain("alice123"));    // False (likely)
     }
 }
@@ -139,12 +139,12 @@ class Program
         var bloomFilter = new BloomFilterRedis(db, "usernameFilter", 1000, 0.01); // 1000 items, 1% error rate
 
         // Add usernames
-        bloomFilter.Add("john_doe");
-        bloomFilter.Add("jane_smith");
+        bloomFilter.Add("pankaj");
+        bloomFilter.Add("pankajrawat");
 
         // Check if usernames are taken
-        Console.WriteLine(bloomFilter.Contains("john_doe"));    // True
-        Console.WriteLine(bloomFilter.Contains("jane_smith"));  // True
+        Console.WriteLine(bloomFilter.Contains("pankaj"));    // True
+        Console.WriteLine(bloomFilter.Contains("pankajrawat"));  // True
         Console.WriteLine(bloomFilter.Contains("alice123"));    // False (likely)
 
         // Clean up
