@@ -27,7 +27,7 @@ Let’s build a Bloom filter in C# from scratch to check if a username is alread
 ### Why Use a Bloom Filter Here?
 When a user tries to register with a username, checking a database for every attempt can be slow, especially with millions of users. A Bloom filter allows us to perform a quick, in-memory check to rule out usernames that are definitely not taken. If the filter indicates a username might be taken, we can then query the database to confirm, reducing the number of expensive queries.
 
-### Step-by-Step Implementation
+### Implementing a Bloom Filter from Scratch
 
 ```csharp
 using System;
