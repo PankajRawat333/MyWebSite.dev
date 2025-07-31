@@ -108,16 +108,17 @@ class Program
 
 ## Using a Bloom Filter with NuGet and Redis for Distributed Applications
 
-For distributed systems, where multiple application instances need to share the same username availability data, we can use a Bloom filter backed by Redis. This approach is ideal for scalable web applications with high registration traffic. We’ll use the `BloomFilter.Redis` NuGet package to integrate with Redis.
+For distributed systems, where multiple application instances need to share the same username availability data, we can use a Bloom filter backed by Redis. This approach is ideal for scalable web applications with high registration traffic. We’ll use the `BloomFilter.Redis.NetCore` NuGet package to integrate with Redis.
 
 ### Why Use Redis and a NuGet Package?
-In a distributed system, user registration requests may come to different servers, each needing to check if a username is taken. Storing the Bloom filter in Redis ensures all instances access the same data, maintaining consistency. The `BloomFilter.Redis` package simplifies integration by handling the bit array storage and hash computations, saving development time compared to a custom Redis implementation.
+In a distributed system, user registration requests may come to different servers, each needing to check if a username is taken. Storing the Bloom filter in Redis ensures all instances access the same data, maintaining consistency. The `BloomFilter.Redis.NetCore` package simplifies integration by handling the bit array storage and hash computations, saving development time compared to a custom Redis implementation.
 
 ### Step 1: Install Required Packages
 Install the following NuGet packages in your project:
+
 ```
 Install-Package StackExchange.Redis
-Install-Package BloomFilter.Redis
+Install-Package BloomFilter.Redis.NetCore
 ```
 
 ### Step 2: Implement Bloom Filter with Redis
@@ -125,7 +126,7 @@ Install-Package BloomFilter.Redis
 ```csharp
 using System;
 using StackExchange.Redis;
-using BloomFilter.Redis;
+using BloomFilter.Redis.NetCore;
 
 class Program
 {
@@ -155,7 +156,7 @@ class Program
 
 ### Explanation
 1. **Redis Connection**: `StackExchange.Redis` connects to a Redis instance (ensure Redis is running locally or on a server).
-2. **BloomFilter.Redis**: This library stores the Bloom filter’s bit array in Redis, making it accessible across distributed application instances.
+2. **BloomFilter.Redis.NetCore**: This library stores the Bloom filter’s bit array in Redis, making it accessible across distributed application instances.
 3. **Parameters**: The constructor takes the Redis database, a key name (`usernameFilter`), expected item count (1000), and desired false-positive rate (1%).
 4. **Username Example**: The filter checks if a username might be taken. If `Contains` returns `false`, the username is available. If `true`, a database query confirms the status, reducing unnecessary queries in a distributed environment.
 5. **Scalability**: Redis ensures all application nodes share the same Bloom filter, supporting high-throughput registration systems.
@@ -191,6 +192,4 @@ To demonstrate the benefits of Bloom filters for the username-taken use case, co
 
 ## Conclusion
 
-Bloom filters are a powerful tool for optimizing memory and performance in applications like username availability checks during user registration. By implementing a Bloom filter from scratch in C#, you gain fine-grained control for single-instance applications. For distributed systems, libraries like `BloomFilter.Redis` and Redis integration enable scalability across multiple nodes. With significant memory savings (up to 93% in our example) and fast lookups, Bloom filters reduce database load and improve user experience in high-traffic systems.
-
-Experiment with the bit array size and hash function count to balance false-positive rates and performance for your needs. For advanced scenarios, consider Redis clusters or alternative structures like Cuckoo Filters for additional functionality.
+Bloom filters are a powerful tool for optimizing memory and performance in applications like username availability checks during user registration. By implementing a Bloom filter from scratch in C#, you gain fine-grained control for single-instance applications. For distributed systems, libraries like `BloomFilter.Redis.NetCore` and Redis integration enable scalability across multiple nodes. With significant memory savings (up to 93% in our example) and fast lookups, Bloom filters reduce database load and improve user experience in high-traffic systems.
