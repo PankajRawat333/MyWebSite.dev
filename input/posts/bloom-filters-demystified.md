@@ -132,12 +132,8 @@ class Program
 {
     static void Main()
     {
-        // Connect to Redis
-        ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-        IDatabase db = redis.GetDatabase();
-
         // Initialize Bloom filter with Redis
-        var bloomFilter = new BloomFilterRedis(db, "usernameFilter", 1000, 0.01); // 1000 items, 1% error rate
+        var bloomFilter = FilterRedisBuilder.Build("localhost:6379", "usernameFilter", 5000000, 0.001);
 
         // Add usernames
         bloomFilter.Add("pankaj");
@@ -147,9 +143,6 @@ class Program
         Console.WriteLine(bloomFilter.Contains("pankaj"));    // True
         Console.WriteLine(bloomFilter.Contains("pankajrawat"));  // True
         Console.WriteLine(bloomFilter.Contains("alice123"));    // False (likely)
-
-        // Clean up
-        redis.Close();
     }
 }
 ```
