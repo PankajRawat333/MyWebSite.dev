@@ -1,15 +1,14 @@
-Title: Create custom project template in Visual Studio
+Title: Create Visual Studio project template
 Description: Learn how to create and share custom project templates in Visual Studio for AWS Lambda with dependency injection and X-Ray configuration.
-Published: 02/02/2023
-Image: /posts/images/VisualStudioTemplate.jpg
+Published: 13/2/2025
+Image: /posts/images/localstack.png
 PrimaryTag: dotnet
 Tags:
   - visualstudio
   - lambda
   - dotnet
 ---
-
-In this comprehensive guide, you'll learn how to create a custom Visual Studio project template for AWS Lambda applications. We'll cover setting up dependency injection, configuring AWS X-Ray, and sharing your template through NuGet. This tutorial is perfect for .NET developers who want to streamline their Lambda project creation process.
+In this comprehensive guide, you'll learn how to create Visual Studio project template for AWS Lambda applications. We'll cover setting up dependency injection, configuring AWS X-Ray, and sharing your template through NuGet. This tutorial is perfect for .NET developers who want to streamline their Lambda project creation process.
 
 ## Prerequisites
 - Visual Studio
